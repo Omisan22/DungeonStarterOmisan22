@@ -11,11 +11,11 @@ import java.util.List;
 /** Stores the score, levels, game status, and model observers. */
 public class ModelImpl implements Model {
   private final Board board;
+  private final List<Observer> observers;
   private int curScore;
   private int highScore;
   private int level;
   private STATUS status;
-  private final List<Observer> observers;
 
   public ModelImpl(int width, int height) {
     this(new BoardImpl(width, height));

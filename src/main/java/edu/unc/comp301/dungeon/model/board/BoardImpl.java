@@ -13,9 +13,7 @@ import java.util.List;
 
 /** Game board: rows are vertical; columns are horizontal. */
 public class BoardImpl implements Board {
-  private static final int[][] DIRECTIONS = {
-      {-1, 0}, {1, 0}, {0, -1}, {0, 1}
-  };
+  private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
   private final Piece[][] board;
   private Hero hero;
 
@@ -27,8 +25,7 @@ public class BoardImpl implements Board {
   }
 
   public BoardImpl(Piece[][] pieces) {
-    if (pieces == null || pieces.length == 0 || pieces[0] == null
-        || pieces[0].length == 0) {
+    if (pieces == null || pieces.length == 0 || pieces[0] == null || pieces[0].length == 0) {
       throw new IllegalArgumentException("Board must be a nonempty rectangular array");
     }
     int width = pieces[0].length;
@@ -74,8 +71,8 @@ public class BoardImpl implements Board {
   }
 
   /**
-   * Moves a piece into the given square, clearing any old reference to that same piece.
-   * Passing null clears the destination square.
+   * Moves a piece into the given square, clearing any old reference to that same piece. Passing
+   * null clears the destination square.
    */
   @Override
   public void set(Piece p, Posn newPos) {
@@ -110,8 +107,7 @@ public class BoardImpl implements Board {
   @Override
   public void init(int enemies, int treasures, int walls) {
     long required = (long) enemies + treasures + walls + 2; // hero and exit
-    if (enemies < 0 || treasures < 0 || walls < 0
-        || required > (long) getWidth() * getHeight()) {
+    if (enemies < 0 || treasures < 0 || walls < 0 || required > (long) getWidth() * getHeight()) {
       throw new IllegalArgumentException("Not enough board squares for all pieces");
     }
 
@@ -169,8 +165,7 @@ public class BoardImpl implements Board {
         continue;
       }
       Piece target = board[newRow][newCol];
-      if (!(target instanceof Wall) && !(target instanceof Exit)
-          && !(target instanceof Enemy)) {
+      if (!(target instanceof Wall) && !(target instanceof Exit) && !(target instanceof Enemy)) {
         moves.add(new Posn(newRow, newCol));
       }
     }

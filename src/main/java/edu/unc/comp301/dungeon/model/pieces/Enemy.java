@@ -2,7 +2,9 @@ package edu.unc.comp301.dungeon.model.pieces;
 
 public class Enemy extends APiece implements MovablePiece {
 
-  public Enemy() {}
+  public Enemy() {
+    super("Enemy", "images/enemy.png");
+  }
 
   @Override
   public CollisionResult collide(Piece other) {
