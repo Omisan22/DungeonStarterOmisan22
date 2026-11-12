@@ -1,4 +1,3 @@
-
 package edu.unc.comp301.dungeon.model.pieces;
 
 public class Hero extends APiece implements MovablePiece {
@@ -10,27 +9,21 @@ public class Hero extends APiece implements MovablePiece {
   @Override
   public CollisionResult collide(Piece other) {
     if (other == null) {
-      return new CollisionResult(
-              0, CollisionResult.Result.CONTINUE);
+      return new CollisionResult(0, CollisionResult.Result.CONTINUE);
     }
 
     if (other instanceof Treasure treasure) {
-      return new CollisionResult(
-              treasure.getValue(),
-              CollisionResult.Result.CONTINUE);
+      return new CollisionResult(treasure.getValue(), CollisionResult.Result.CONTINUE);
     }
 
     if (other instanceof Enemy) {
-      return new CollisionResult(
-              0, CollisionResult.Result.GAME_OVER);
+      return new CollisionResult(0, CollisionResult.Result.GAME_OVER);
     }
 
     if (other instanceof Exit) {
-      return new CollisionResult(
-              0, CollisionResult.Result.NEXT_LEVEL);
+      return new CollisionResult(0, CollisionResult.Result.NEXT_LEVEL);
     }
 
-    throw new IllegalArgumentException(
-            "Invalid hero collision");
+    throw new IllegalArgumentException("Invalid hero collision");
   }
 }

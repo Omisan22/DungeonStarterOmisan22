@@ -1,24 +1,19 @@
-
 package edu.unc.comp301.dungeon.model.pieces;
 
 public class Enemy extends APiece implements MovablePiece {
 
-  public Enemy() {
-  }
+  public Enemy() {}
 
   @Override
   public CollisionResult collide(Piece other) {
     if (other == null || other instanceof Treasure) {
-      return new CollisionResult(
-              0, CollisionResult.Result.CONTINUE);
+      return new CollisionResult(0, CollisionResult.Result.CONTINUE);
     }
 
     if (other instanceof Hero) {
-      return new CollisionResult(
-              0, CollisionResult.Result.GAME_OVER);
+      return new CollisionResult(0, CollisionResult.Result.GAME_OVER);
     }
 
-    throw new IllegalArgumentException(
-            "Invalid enemy collision");
+    throw new IllegalArgumentException("Invalid enemy collision");
   }
 }

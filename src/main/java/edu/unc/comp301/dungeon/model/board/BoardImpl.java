@@ -13,12 +13,11 @@ import java.util.List;
 
 /** Game board: rows are vertical; columns are horizontal. */
 public class BoardImpl implements Board {
-  private final Piece[][] board;
-  private Hero hero;
-
   private static final int[][] DIRECTIONS = {
       {-1, 0}, {1, 0}, {0, -1}, {0, 1}
   };
+  private final Piece[][] board;
+  private Hero hero;
 
   public BoardImpl(int width, int height) {
     if (width <= 0 || height <= 0) {
