@@ -1,0 +1,112 @@
+/* Dungeon Crawler JavaFX stylesheet: two accessible, contrasting themes. */
+.app-root {
+  -fx-font-family: "Arial", "SansSerif";
+  -fx-font-smoothing-type: gray;
+}
+
+.theme-dark {
+  -fx-background-color: #101725;
+  -fx-text-fill: #eef3ff;
+}
+.theme-light {
+  -fx-background-color: #eef3fc;
+  -fx-text-fill: #1c2840;
+}
+.theme-dark .label { -fx-text-fill: #eef3ff; }
+.theme-light .label { -fx-text-fill: #1c2840; }
+
+.title-card {
+  -fx-background-radius: 26;
+  -fx-padding: 36;
+  -fx-border-radius: 26;
+  -fx-border-width: 1.5;
+}
+.theme-dark .title-card {
+  -fx-background-color: #1a263a;
+  -fx-border-color: #33445e;
+}
+.theme-light .title-card {
+  -fx-background-color: white;
+  -fx-border-color: #cad6ea;
+}
+.crest { -fx-font-size: 29px; }
+.game-title {
+  -fx-font-size: 49px;
+  -fx-font-weight: 900;
+  -fx-text-alignment: center;
+}
+.subtitle { -fx-font-size: 17px; }
+.help-text { -fx-font-size: 13px; -fx-opacity: .82; }
+.byline { -fx-font-size: 15px; -fx-font-style: italic; }
+.score-card {
+  -fx-font-weight: bold;
+  -fx-font-size: 19px;
+  -fx-text-alignment: center;
+  -fx-alignment: center;
+  -fx-min-width: 180px;
+  -fx-padding: 15;
+  -fx-background-radius: 12;
+}
+.theme-dark .score-card { -fx-background-color: #273650; }
+.theme-light .score-card { -fx-background-color: #e8effa; }
+.button {
+  -fx-cursor: hand;
+  -fx-background-radius: 12;
+  -fx-padding: 11 20;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+}
+.primary-button {
+  -fx-background-color: #f7c967;
+  -fx-text-fill: #161c29;
+  -fx-min-width: 270px;
+}
+.primary-button:hover { -fx-background-color: #ffdc92; }
+.secondary-button {
+  -fx-background-color: transparent;
+  -fx-border-radius: 12;
+  -fx-border-width: 1.5;
+  -fx-font-size: 14px;
+}
+.theme-dark .secondary-button {
+  -fx-text-fill: #f2f5ff;
+  -fx-border-color: #9aaccb;
+}
+.theme-light .secondary-button {
+  -fx-text-fill: #1d2c49;
+  -fx-border-color: #667898;
+}
+.game-header { -fx-padding: 4 0 8 0; }
+.header-title { -fx-font-size: 21px; -fx-font-weight: 900; }
+.stat-chip {
+  -fx-font-size: 15px;
+  -fx-font-weight: bold;
+  -fx-padding: 9 13;
+  -fx-background-radius: 12;
+}
+.theme-dark .stat-chip { -fx-background-color: #273650; }
+.theme-light .stat-chip { -fx-background-color: #dce6f6; }
+.board-scroller { -fx-background-color: transparent; -fx-padding: 0; }
+.board-scroller > .viewport { -fx-background-color: transparent; }
+.game-board { -fx-border-width: 4; -fx-border-color: #6984a4; }
+.tile { -fx-border-color: #53637b; -fx-border-width: .5; }
+.theme-dark .tile-empty { -fx-background-color: #253044; }
+.theme-light .tile-empty { -fx-background-color: #d5dfec; }
+.theme-dark .tile-hero { -fx-background-color: #224f61; }
+.theme-light .tile-hero { -fx-background-color: #ade1eb; }
+.theme-dark .tile-enemy { -fx-background-color: #693549; }
+.theme-light .tile-enemy { -fx-background-color: #f5bdc6; }
+.theme-dark .tile-treasure { -fx-background-color: #655026; }
+.theme-light .tile-treasure { -fx-background-color: #ffe49b; }
+.theme-dark .tile-wall { -fx-background-color: #495369; }
+.theme-light .tile-wall { -fx-background-color: #9caac0; }
+.theme-dark .tile-exit { -fx-background-color: #245843; }
+.theme-light .tile-exit { -fx-background-color: #b2e3c7; }
+.tile-symbol { -fx-font-size: 27px; -fx-alignment: center; }
+.legend { -fx-font-size: 16px; }
+.direction-button {
+  -fx-background-color: #f7c967;
+  -fx-text-fill: #151c2b;
+  -fx-font-size: 23px;
+}
+.direction-button:hover { -fx-background-color: #ffdc92; }

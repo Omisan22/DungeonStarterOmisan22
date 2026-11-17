@@ -34,25 +34,39 @@ public class ModelImpl implements Model {
   }
 
   @Override
-  public int getWidth() { return board.getWidth(); }
+  public int getWidth() {
+    return board.getWidth();
+  }
 
   @Override
-  public int getHeight() { return board.getHeight(); }
+  public int getHeight() {
+    return board.getHeight();
+  }
 
   @Override
-  public Piece get(Posn p) { return board.get(p); }
+  public Piece get(Posn p) {
+    return board.get(p);
+  }
 
   @Override
-  public int getCurScore() { return curScore; }
+  public int getCurScore() {
+    return curScore;
+  }
 
   @Override
-  public int getHighScore() { return highScore; }
+  public int getHighScore() {
+    return highScore;
+  }
 
   @Override
-  public int getLevel() { return level; }
+  public int getLevel() {
+    return level;
+  }
 
   @Override
-  public STATUS getStatus() { return status; }
+  public STATUS getStatus() {
+    return status;
+  }
 
   /** Each level contains level + 1 enemies, two treasures, two walls, a hero, an exit. */
   private boolean initializeLevel() {
@@ -102,22 +116,32 @@ public class ModelImpl implements Model {
           finishGame();
         }
       }
-      case CONTINUE -> { /* Keep playing. */ }
+      case CONTINUE -> {
+        /* Keep playing. */
+      }
     }
     notifyObservers();
   }
 
   @Override
-  public void moveUp() { move(-1, 0); }
+  public void moveUp() {
+    move(-1, 0);
+  }
 
   @Override
-  public void moveDown() { move(1, 0); }
+  public void moveDown() {
+    move(1, 0);
+  }
 
   @Override
-  public void moveLeft() { move(0, -1); }
+  public void moveLeft() {
+    move(0, -1);
+  }
 
   @Override
-  public void moveRight() { move(0, 1); }
+  public void moveRight() {
+    move(0, 1);
+  }
 
   @Override
   public void addObserver(Observer o) {
